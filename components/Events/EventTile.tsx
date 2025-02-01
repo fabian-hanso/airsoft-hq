@@ -6,7 +6,7 @@ import {
 
 export default function EventTile() {
     return (
-        <div href='#' className='w-full h-auto flex flex-col'>
+        <div className='w-full h-auto flex flex-col'>
             <div className='w-full aspect-video overflow-hidden relative'>
                 <img src="./Fabian-Airsoft.jpg" className='w-full h-full object-cover object-top'/>
                 <div className='absolute top-0 right-0 px-2 py-1 bg-blue-500'>
