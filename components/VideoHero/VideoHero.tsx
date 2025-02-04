@@ -8,7 +8,7 @@ function VideoHero() {
         <video autoPlay muted loop id="myVideo">
             <source src="/HeroVideoMain.mp4" type="video/mp4" />
         </video>
-        <div className='absolute left-0 right-0 top-0 bottom-0 bg-gray-900/90'></div>
+        <div className='absolute left-0 right-0 top-0 bottom-0 bg-slate-900/90'></div>
         <div className="absolute top-0 right-0 left-0 bottom-0 flex flex-row items-center">
             <div className="mx-auto w-7xl min-w-7xl max-w-7xl p-6 lg:px-8 flex-1 flex flex-col gap-8">
                 <h1 className='font-regular text-4xl leading-5'><span className='font-bold text-blue-500'>Airsoft HQ</span> - Dein Zuhause</h1>
