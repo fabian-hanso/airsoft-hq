@@ -13,43 +13,27 @@ import {
   PopoverPanel,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
 
 const products = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Spielfelder finden', description: 'Finde Spielfelder in deiner Nähe', href: '/spielfelder'},
+  { name: 'Rabatte & Angebote', description: 'Die exklusivsten Angebote für dich', href: '#'},
 ]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white">
+    <header className="bg-white border-b">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
+            <div className='h-8 min-w-28 px-6 bg-blue-500 flex justify-center items-center'>Logo</div>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -63,9 +47,15 @@ export default function Navbar() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <a href="/blog" className="text-sm/6 font-regular text-neutral-900">
+            Blog
+          </a>
+          <a href="/events" className="text-sm/6 font-regular text-neutral-900">
+            Events
+          </a>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-regular text-neutral-900 focus-visible:border-none focus-visible:outline-none">
-              Bereiche
+              Mehr
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-neutral-900" />
             </PopoverButton>
 
@@ -89,15 +79,12 @@ export default function Navbar() {
                   </div>
                 ))}
               </div>
+                <a href='https://discord.gg/UuYMfATHzf' target='_blank' className='w-full bg-blue-500 flex justify-center items-center gap-3 px-4 py-3 hover:bg-stone-900 transition-all group'>
+                  <img src="/Discord-Logos/discord-mark-white.svg" className='w-6 h-auto group-hover:animate-pulse'/>
+                  Discord
+                </a>
             </PopoverPanel>
           </Popover>
-
-          <a href="/blog" className="text-sm/6 font-regular text-neutral-900">
-            Blog
-          </a>
-          <a href="/events" className="text-sm/6 font-regular text-neutral-900">
-            Events
-          </a>
           <a href="#" className="text-sm/6 font-regular text-neutral-900">
             Angebote
           </a>
@@ -114,11 +101,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-8 w-auto"
-              />
+              <div className='h-8 min-w-28 px-6 bg-blue-500 flex justify-center items-center'>Logo</div>
             </a>
             <button
               type="button"
@@ -138,12 +121,13 @@ export default function Navbar() {
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-[open]:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products, ...callsToAction].map((item) => (
+                    {products.map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
                         href={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.name}
                       </DisclosureButton>
@@ -181,7 +165,7 @@ export default function Navbar() {
                   target='_blank'
                   className="px-3 py-2.5 text-base/7 bg-blue-500 text-white hover:bg-stone-900 flex gap-2 justify-center items-center"
                 >
-                  <img src='./Discord-Logos/discord-mark-white.svg' className='w-4 h-auto'/>
+                  <img src='/Discord-Logos/discord-mark-white.svg' className='w-4 h-auto'/>
                   Discord
                 </a>
               </div>
