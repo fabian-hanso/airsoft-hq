@@ -48,12 +48,12 @@ export default function Navbar() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a href="/blog" className="text-sm/6 font-regular text-neutral-900">
+          <Link href="/blog" className="text-sm/6 font-regular text-neutral-900">
             Blog
-          </a>
-          <a href="/events" className="text-sm/6 font-regular text-neutral-900">
+          </Link>
+          <Link href="/events" className="text-sm/6 font-regular text-neutral-900">
             Events
-          </a>
+          </Link>
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-regular text-neutral-900 focus-visible:border-none focus-visible:outline-none">
               Mehr
@@ -135,18 +135,18 @@ export default function Navbar() {
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                <a
-                  href="#"
+                <Link
+                  href="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Blog
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/events"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
                   Events
-                </a>
+                </Link>
                 <a
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
