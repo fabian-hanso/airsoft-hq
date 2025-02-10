@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FireIcon } from '@heroicons/react/24/outline'
 import React from 'react'
@@ -45,7 +46,7 @@ export default function Post({post}: any) {
                     <p className='lg:mx-auto lg:text-center text-blue-500 mt-4 text-sm'>{formattedDate}</p>
                 </div>
                 <div className='w-full aspect-video lg:aspect-[16/7] overflow-hidden'>
-                    <img src={post.fields.titelbild.fields.file.url} className='object-cover w-full h-auto object-center'/>
+                    <img src={post.fields.titelbild.fields.file.url} className='object-cover w-full h-auto object-center' alt=""/>
                 </div>
                 <div className='max-w-3xl mx-auto mt-16 flex flex-col'>
                     <div className='text-stone-900'>
@@ -53,7 +54,7 @@ export default function Post({post}: any) {
                     </div>
                     <div className='flex gap-3'>
                         <div className='w-12 h-12 bg-red-100 overflow-hidden'>
-                            <img src={post.fields.autor.fields.image.fields.file.url} className='w-full h-full object-cover object-center  '/>
+                            <img src={post.fields.autor.fields.image.fields.file.url} className='w-full h-full object-cover object-center' alt=""/>
                         </div>
                         <div>
                             <p className='text-stone-600 font-semibold'>{post.fields.autor.fields.name}</p>

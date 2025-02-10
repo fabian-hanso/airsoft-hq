@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useState } from 'react'
@@ -80,7 +81,7 @@ export default function Navbar() {
                 ))}
               </div>
                 <a href='https://discord.gg/UuYMfATHzf' target='_blank' className='w-full bg-blue-500 flex justify-center items-center gap-3 px-4 py-3 hover:bg-stone-900 transition-all group'>
-                  <img src="/Discord-Logos/discord-mark-white.svg" className='w-6 h-auto group-hover:animate-pulse'/>
+                  <img src="/Discord-Logos/discord-mark-white.svg" className='w-6 h-auto group-hover:animate-pulse' alt=""/>
                   Discord
                 </a>
             </PopoverPanel>
@@ -165,7 +166,7 @@ export default function Navbar() {
                   target='_blank'
                   className="px-3 py-2.5 text-base/7 bg-blue-500 text-white hover:bg-stone-900 flex gap-2 justify-center items-center"
                 >
-                  <img src='/Discord-Logos/discord-mark-white.svg' className='w-4 h-auto'/>
+                  <img src='/Discord-Logos/discord-mark-white.svg' className='w-4 h-auto' alt=""/>
                   Discord
                 </a>
               </div>

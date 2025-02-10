@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import {
     InformationCircleIcon,
@@ -8,7 +9,7 @@ export default function EventTile() {
     return (
         <div className='w-full h-auto flex flex-col'>
             <div className='w-full aspect-video overflow-hidden relative'>
-                <img src="./Fabian-Airsoft.jpg" className='w-full h-full object-cover object-top'/>
+                <img src="./Fabian-Airsoft.jpg" className='w-full h-full object-cover object-top' alt=""/>
                 <div className='absolute top-0 right-0 px-2 py-1 bg-blue-500'>
                     <p className='text-sm'>15.12.2025</p>
                 </div>

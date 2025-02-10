@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Battery0Icon, BoltIcon, CheckIcon, CreditCardIcon, FaceSmileIcon, InformationCircleIcon, MapPinIcon, ShoppingCartIcon, TicketIcon, TruckIcon, WifiIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline'
 
 export default function PlaygroundDetails() {
@@ -12,7 +13,7 @@ export default function PlaygroundDetails() {
             <div className='max-w-7xl mx-auto lg:px-8 mb-16 lg:mt-28 lg:mb-28'>
 
                 <div className='w-full aspect-video lg:aspect-[16/7] overflow-hidden bg-red-200'>
-                    <img src="/Fabian-Airsoft.jpg" className='object-cover w-full h-auto object-center'/>
+                    <img src="/Fabian-Airsoft.jpg" className='object-cover w-full h-auto object-center' alt=""/>
                 </div>
                 {/*  Mobile Headline */}
                 <div className="block lg:hidden px-6 lg:px-0">
