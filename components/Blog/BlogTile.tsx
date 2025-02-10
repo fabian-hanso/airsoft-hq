@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FireIcon } from '@heroicons/react/24/outline'
-import React from 'react'
+import Link from 'next/link'
 
 export default function BlogTile({post}: any) {
 
     return (
-        <a href={"/blog/" + post.fields.slug} className='w-full h-auto flex flex-col group'>
+        <Link href={"/blog/" + post.fields.slug} className='w-full h-auto flex flex-col group'>
             <div className='w-full aspect-video overflow-hidden bg-blue-500'>
                 <img src={post.fields.titelbild.fields.file.url} className='w-full h-full object-cover group-hover:opacity-40 group-hover:scale-105 transition-all' alt=""/>
             </div>
@@ -24,6 +24,6 @@ export default function BlogTile({post}: any) {
                 ))}
                 </p>
             </div>
-        </a>
+        </Link>
     )
 }
