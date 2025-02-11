@@ -31,6 +31,13 @@ export default function Post({post}: any) {
           },
           renderNode: {
             [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className='mb-8 last-of-type:mb-0'>{children}</p>,
+            [BLOCKS.EMBEDDED_ASSET]: (node: any) => <img
+            src={`https://${node.data.target.fields.file.url}`}
+            height={node.data.target.fields.file.details.image.height}
+            width={node.data.target.fields.file.details.image.width}
+            alt={node.data.target.fields.description}
+            className='mb-8'
+          />,
             // [BLOCKS.EMBEDDED_ASSET]: (node: any, children: any) => <img className='mb-8 last-of-type:mb-0' src={node}>{children}</img>
           },
       }

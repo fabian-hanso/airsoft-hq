@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Post from "@/components/BlogPost/BlogPost";
 import client from "@/lib/contentful";
 
@@ -7,7 +8,7 @@ type BlogPageProps = {
     };
   };
 
-export default async function BlogPost(props: BlogPageProps) {
+export default async function BlogPost(props: any) {
 
     const { params } = props;
     const { blogpost } = await params;
