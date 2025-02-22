@@ -137,7 +137,7 @@ const navigation = {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm/6 font-semibold text-white">Legal</h3>
+                  <h3 className="text-sm/6 font-semibold text-white">Rechtliches</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
