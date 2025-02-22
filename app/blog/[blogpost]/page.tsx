@@ -1,17 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Post from "@/components/BlogPost/BlogPost";
 import client from "@/lib/contentful";
 
-// type BlogPageProps = {
-//     params: {
-//       blogpost: string;
-//     };
-//   };
+type BlogPageProps = {
+    params: {
+      blogpost: string;
+    }
+  };
 
-export default async function BlogPost(props: any) {
+export default async function BlogPost(props: BlogPageProps) {
 
-    const { params } = props;
-    const { blogpost } = await params;
+  const { params } = props;
+  const { blogpost } = params;
 
   const queryOptions = {
     content_type: "blogbeitrag",

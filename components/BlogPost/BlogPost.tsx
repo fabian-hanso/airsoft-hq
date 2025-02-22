@@ -59,13 +59,13 @@ export default function Post({post}: any) {
                     <div className='text-stone-900'>
                     { documentToReactComponents(post.fields.content, renderOption) }
                     </div>
-                    <div className='flex gap-3'>
+                    <div className='flex gap-3 mt-4 lg:mt-8'>
                         <div className='w-12 h-12 bg-red-100 overflow-hidden'>
                             <img src={post.fields.autor.fields.image.fields.file.url} className='w-full h-full object-cover object-center' alt=""/>
                         </div>
                         <div>
-                            <p className='text-stone-600 font-semibold'>{post.fields.autor.fields.name}</p>
-                            <p className='text-stone-600'>{post.fields.autor.fields.rolle}</p>
+                            <p className='text-blue-500 font-semibold'>{post.fields.autor.fields.name}</p>
+                            <p className='text-stone-900'>{post.fields.autor.fields.rolle}</p>
                         </div>
                     </div>
                 </div>

@@ -2,11 +2,11 @@ import { JSX, SVGProps } from "react"
 
 const navigation = {
     solutions: [
-      { name: 'Marketing', href: '#' },
-      { name: 'Analytics', href: '#' },
-      { name: 'Automation', href: '#' },
-      { name: 'Commerce', href: '#' },
-      { name: 'Insights', href: '#' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Events', href: '/events' },
+      { name: 'Spielfelder', href: '/spielfelder' },
+      { name: 'Rabatte', href: '#' },
+      { name: 'Discord', href: '#' },
     ],
     support: [
       { name: 'Submit ticket', href: '#' },
@@ -14,15 +14,16 @@ const navigation = {
       { name: 'Guides', href: '#' },
     ],
     company: [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
+      { name: 'Über uns', href: '#' },
+      { name: 'Kooperationen', href: '#' },
       { name: 'Jobs', href: '#' },
-      { name: 'Press', href: '#' },
+      { name: 'Presse', href: '#' },
     ],
     legal: [
-      { name: 'Terms of service', href: '#' },
-      { name: 'Privacy policy', href: '#' },
-      { name: 'License', href: '#' },
+      { name: 'Impressum', href: '/impressum' },
+      { name: 'Kontakt', href: '#' },
+      { name: 'Datenschutz', href: '#' },
+      { name: 'FAQ', href: '#' },
     ],
     social: [
       {
@@ -98,7 +99,7 @@ const navigation = {
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm/6 font-semibold text-white">Solutions</h3>
+                  <h3 className="text-sm/6 font-semibold text-white">Quick-Links</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.solutions.map((item) => (
                       <li key={item.name}>
@@ -110,7 +111,7 @@ const navigation = {
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
-                  <h3 className="text-sm/6 font-semibold text-white">Support</h3>
+                  <h3 className="text-sm/6 font-semibold text-white">Einsteiger</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.support.map((item) => (
                       <li key={item.name}>
@@ -124,7 +125,7 @@ const navigation = {
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm/6 font-semibold text-white">Company</h3>
+                  <h3 className="text-sm/6 font-semibold text-white">Airsoft HQ</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.company.map((item) => (
                       <li key={item.name}>
@@ -150,8 +151,8 @@ const navigation = {
               </div>
             </div>
           </div>
-          <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-            <p className="text-sm/6 text-gray-300">&copy; 2025 Airsoft HQ</p>
+          <div className="mt-16 border-t border-white/30 pt-8 sm:mt-20 lg:mt-24">
+            <p className="text-sm/6 text-gray-300">&copy; 2025 - Airsoft HQ</p>
           </div>
         </div>
       </footer>

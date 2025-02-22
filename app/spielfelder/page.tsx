@@ -1,12 +1,19 @@
 import PlaygroundOverview from "@/components/PlaygroundOverview/PlaygroundOverview";
 import SubPageImageHeader from "@/components/SubPageImageHeader/SubPageImageHeader";
+import client from "@/lib/contentful";
 
-export default function Spielfelder() {
+export default async function Spielfelder() {
+
+  const queryOptions = {
+    content_type: "spielfelder",
+  };
+
+  const spielfeldData = await client.getEntries(queryOptions);
 
   return (
     <div className="">
       <SubPageImageHeader />
-      <PlaygroundOverview />
+      <PlaygroundOverview spielfeldData={spielfeldData}/>
     </div>
   );
 }
