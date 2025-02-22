@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Post from "@/components/BlogPost/BlogPost";
 import client from "@/lib/contentful";
 
-type BlogPageProps = {
-    params: {
-      blogpost: string;
-    }
-  };
+// type BlogPageProps = {
+//     params: {
+//       blogpost: string;
+//     }
+//   };
 
-export default async function BlogPost(props: BlogPageProps) {
+export default async function BlogPost(props: any) {
 
   const { params } = props;
   const { blogpost } = params;
