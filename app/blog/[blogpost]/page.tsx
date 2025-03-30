@@ -21,13 +21,13 @@ export default async function BlogPost(props: any) {
 
   const post = await client.getEntries(queryOptions);
 
-  if(!post.total > 0) {
-    return(
-      // Was passiert, wenn es den Blogbeitrag nicht gibt?
-      // redirect("/blog")
-      <ErrorView />
-    )
-  }
+  // if(!post.total > 0) {
+  //   return(
+  //     // Was passiert, wenn es den Blogbeitrag nicht gibt?
+  //     // redirect("/blog")
+  //     <ErrorView />
+  //   )
+  // }
 
   return (
     <Post post={post.items[0]}/>
