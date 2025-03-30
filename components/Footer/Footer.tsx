@@ -83,7 +83,7 @@ const navigation = {
         <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
-            <div className='h-8 min-w-28 px-6 bg-blue-500 flex justify-center items-center max-w-fit'>Logo</div>
+            <img src='/logo.svg' className='w-12 h-12'/>
               <p className="text-balance text-sm/6 text-gray-300">
                 Airsoft HQ ist die Plattform für Airsoft-Spieler aus dem deutschsprachigen Raum.
               </p>

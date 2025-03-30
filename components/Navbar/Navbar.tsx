@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <div className='h-8 min-w-28 px-6 bg-blue-500 flex justify-center items-center'>Logo</div>
+            <img src='/logo.svg' className='w-12 h-12'/>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -102,7 +102,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <div className='h-8 min-w-28 px-6 bg-blue-500 flex justify-center items-center'>Logo</div>
+              <img src='/logo.svg' className='w-12 h-12'/>
             </a>
             <button
               type="button"

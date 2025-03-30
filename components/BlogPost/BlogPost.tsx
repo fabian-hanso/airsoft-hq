@@ -24,6 +24,8 @@ export default function Post({post}: any) {
 
     const formattedDate = formatDate(post.sys.createdAt);
 
+    console.log(post)
+
     const renderOption = {
         renderMark: {
             [MARKS.BOLD]: (text: any) => <span className='font-semibold'>{text}</span>,
@@ -31,6 +33,7 @@ export default function Post({post}: any) {
           },
           renderNode: {
             [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p className='mb-8 last-of-type:mb-0'>{children}</p>,
+            [BLOCKS.HEADING_3]: (node: any, children: any) => <p className='mb-4 last-of-type:mb-0 font-semibold text-2xl'>{children}</p>,
             [BLOCKS.EMBEDDED_ASSET]: (node: any) => <img
             src={`https://${node.data.target.fields.file.url}`}
             height={node.data.target.fields.file.details.image.height}
