@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import ErrorView from "@/components/Blog/ErrorView";
+// import ErrorView from "@/components/Blog/ErrorView";
 import Post from "@/components/BlogPost/BlogPost";
 import client from "@/lib/contentful";
 
