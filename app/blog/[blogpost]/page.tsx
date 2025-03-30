@@ -2,7 +2,6 @@
 import ErrorView from "@/components/Blog/ErrorView";
 import Post from "@/components/BlogPost/BlogPost";
 import client from "@/lib/contentful";
-import { redirect } from "next/navigation";
 
 // type BlogPageProps = {
 //     params: {
